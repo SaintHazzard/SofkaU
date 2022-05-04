@@ -1,0 +1,83 @@
+Proceso Drogueriamia
+	Definir nombrecliente, anotacion Como Caracter;
+	Definir eleccion, carrito Como Entero;
+	Definir producto1, producto2, producto3, producto4 Como Caracter;
+	producto1<- "Acetaminofen 500 mg x 10 capsulas, 1000 COP";
+	producto2<- "Naproflash Capsulas Caja X 4 Capsulas, 5000 COP";
+	producto3<- "Lumbal Caja X 12 Tabletas, 12000 COP";
+	producto4<- "Sevedol Extra Fuerte Caja X 8 Tabletas, 8000 COP";
+	carrito<-0;
+	Escribir "Hola, Indicanos tu nombre por favor";
+	Leer nombrecliente;
+	
+	Escribir "Hola ", nombrecliente, " somos la drogueria mi salud en que te podemos ayudar hoy ";
+	
+	Escribir "1. Comprar";
+	Escribir "2. Consulta los precios de todos nuestros productos";
+	Escribir "3. Devoluciones";
+	leer eleccion;
+	Segun eleccion Hacer
+		1: repetir 
+				Escribir "Que deseas comprar?";
+				Escribir "1. ", producto1;
+				Escribir "2. ", producto2;
+				Escribir "3. ", producto3;
+				Escribir "4. ", producto4;
+				
+				Escribir "5. Pagar";
+				Escribir "Su pedido es de ", carrito, " COP";
+				leer eleccion;
+				segun eleccion Hacer
+					1: carrito<-carrito+1000;
+						Limpiar Pantalla;
+						
+					2: carrito<-carrito+5000;
+						Limpiar Pantalla;
+						
+					3: carrito<-carrito+12000;
+						Limpiar Pantalla;
+						
+					4: carrito<-carrito+8000;
+						Limpiar Pantalla;
+						
+					5: Escribir "El total de su pedido es ", carrito, "COP";
+						
+				FinSegun
+			Hasta Que eleccion =5
+		2:Escribir "Que deseas comprar?";
+			Escribir "1. ", producto1;
+			Escribir "2. ", producto2;
+			Escribir "3. ", producto3;
+			Escribir "4. ", producto4;
+		3:
+			Repetir
+				Escribir "Que producto desea devolver";
+				Escribir "1. ", producto1;
+				Escribir "2. ", producto2;
+				Escribir "3. ", producto3;
+				Escribir "4. ", producto4;
+				Escribir "5. No deseo devolver ningun otro producto";
+				Escribir "Su devolucion es de ", carrito, "COP";
+				leer eleccion;
+				
+				segun eleccion Hacer
+					1: carrito<-carrito+1000;
+						Limpiar Pantalla;
+						
+					2: carrito<-carrito+5000;
+						Limpiar Pantalla;
+						
+					3: carrito<-carrito+12000;
+						Limpiar Pantalla;
+						
+					4: carrito<-carrito+8000;
+						Limpiar Pantalla;
+						
+					5: Escribir "El total de su devolucion es ", carrito, "COP,";
+					FinSegun
+			Hasta Que eleccion=5
+			
+			
+	FinSegun 
+	
+FinProceso

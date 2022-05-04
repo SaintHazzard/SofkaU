@@ -1,0 +1,51 @@
+
+	
+
+Proceso sin_titulo
+	definir ntitular Como Caracter;
+	Definir balance, num, valor1, ingreso, retiro Como Real;
+	Definir eleccion Como Entero;
+	
+	Escribir "Ingrese nombre del titular de la cuenta";
+	leer ntitular;
+	balance<-azar(100);
+	valor1<-0;
+
+	
+	Escribir "Su balance es de: ", balance;
+	Escribir "1. Ingresar";
+	Escribir "2. Retirar";
+	leer eleccion;
+	Segun eleccion Hacer
+		1: Escribir "Que valor desea ingresar?";
+			leer valor1;
+			si valor1>0 Entonces
+				ingreso<-balance+valor1;
+				Escribir "Su ingreso fue por ", valor1, " y su balance ahora es de ", ingreso;
+			SiNo
+				Repetir
+					Escribir "Valor incorrecto o no permitido, ingrese un valor valido";
+					leer valor1;
+				Hasta Que valor1>0
+			FinSi
+		2: Escribir "Que valor desea retirar?";
+					leer valor1;
+					si valor1>balance Entonces
+						Repetir
+							Escribir "Saldo insuficiente, ingrese de nuevo el valor";
+							leer valor1;
+						Hasta Que valor1<balance
+					SiNo
+						retiro<-balance-valor1;
+						Escribir "Su retiro fue por ", valor1, " y su balance restante es de ", retiro;
+						
+					FinSi
+			
+			
+	FinSegun
+	
+	
+	
+	
+	
+FinProceso

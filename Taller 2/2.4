@@ -1,0 +1,58 @@
+Proceso sin_titulo
+	Definir nombrecliente, anotacion, pelicula1, pelicula2, pelicula3 Como Caracter;
+	Definir eleccion Como Entero;
+	Escribir "Hola, Indicanos tu nombre por favor";
+	Leer nombrecliente;
+	pelicula1<- "Jumanji";
+	pelicula2<-"Coco";
+	pelicula3<-"Encanto";
+	Escribir "Hola ", nombrecliente, " somos la videotienda el porvenir en que te podemos ayudar hoy ";
+	
+	Escribir "1.Consultar peliculas disponibles";
+	Escribir "2.Alquilar pelicula";
+	Escribir "3.Devolver pelicula";
+	Leer  eleccion;
+	
+	
+	Segun eleccion Hacer
+		1:	Escribir "Actualmente tenemos las siguientes peliculas disponibles escribe el numero de la que deseas alquilar";
+			escribir "1. ", pelicula1;
+			Escribir "2. ", pelicula2;
+			Escribir "3. ", pelicula3;
+			Escribir "4. No deseo alquilar ninguna";
+			Leer eleccion;
+			segun eleccion Hacer
+				1: Escribir "Alquilaste la pelicula ", pelicula1;
+				2: Escribir "Alquilaste la pelicula ", pelicula2;
+				3: Escribir "Alquilaste la pelicula ", pelicula3;
+				4: si eleccion=4 Entonces
+						Escribir "Vuelve pronto";
+					FinSi
+			FinSegun
+			
+		2: Escribir "1. ", pelicula1;
+			Escribir "2. ", pelicula2;
+			Escribir "3. ", pelicula3;
+			leer eleccion;
+			segun eleccion Hacer
+				1: Escribir "1. ", pelicula1;
+				2:	Escribir "2. ", pelicula2;
+				3:	Escribir "3. ", pelicula3;
+			FinSegun
+		3: Escribir "Deseas añadir alguna observacion sobre la pelicula";
+			Escribir "1. Si";
+			Escribir "2. No";
+			leer eleccion;
+				segun eleccion hacer
+				1: Escribir "Escribe tu observacion";
+					leer anotacion;
+					Escribir "Gracuas por utilizar nuestros servicios, su observacion fue recibida y sera tenida en cuenta para mejorar nuestros servicios, hasta pronto";
+				2: Escribir "Gracuas por utilizar nuestros servicios, hasta pronto";
+			FinSegun
+			
+			
+	FinSegun
+	
+	
+	
+FinProceso
