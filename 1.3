@@ -1,0 +1,12 @@
+Proceso taller "1.3"
+	Definir nombre, apellido, nombres, space, nombress, nombremadre, nombrepadre Como Caracter;
+		Escribir "Escriba su nombre"; Leer nombre;
+		Escribir "Escriba sus apellidos"; Leer apellido;
+		Escribir "Escriba el nombre de su madre"; leer nombremadre;
+		Escribir "Escriba el nombre de su padre"; leer nombrepadre;
+			space<-" ";
+	
+		nombres<-Concatenar(nombre, space);
+		nombress<-Concatenar(nombres, apellido);
+		Escribir 'Yo ', nombress, " soy hijo de ", nombremadre, " y " , nombrepadre;
+FinProceso
