@@ -1,0 +1,301 @@
+
+
+
+Proceso sin_titulo
+	Definir telefono, nombre, nombre1, nombre2, nombre3, telefono1, telefono2, telefono3, organizacion1, organizacion2, organizacion3, organizacion Como Caracter;
+	Definir eleccion, eleccionmainmenu, eleccionsubmenu, eleccionsubsubmenu Como entero;
+	organizacion1<-"         ";
+	organizacion2<-"         ";
+	organizacion3<-"         ";
+	nombre1<-"         ";
+	nombre2<-"         ";
+	nombre3<-"         ";
+	telefono1<-"         ";
+	telefono2<-"         ";
+	telefono3<-"         ";
+	
+	
+	
+	Repetir
+		mainmenu;
+		leer eleccionmainmenu;
+		Segun eleccionmainmenu Hacer
+			
+				//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+				//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+			1: repetir
+					Escribir "1.-Nombre: ", nombre1, " 	-Telefono: ", telefono1, " -Organizacion: ", organizacion1; Escribir "2.-Nombre: ", nombre2, " -Telefono: ", telefono2, " -Organizacion:", organizacion2;
+					Escribir "3.-Nombre: ", nombre3, " -Telefono: ", telefono3, " -Organizacion: ", organizacion3; Escribir "4. Volver"; Escribir "En cual espacio desea agregar el contacto?";
+					leer eleccionsubmenu;
+					Si eleccionsubmenu = 1 Entonces
+						Escribir "Ingrese los datos del contacto, ", "Nombre completo";
+						leer nombre;
+						nombre1<-nombre;
+						Escribir "Ingrese numero telefonico";
+						leer telefono;
+						si (telefono=telefono1) y (telefono=telefono2) y (telefono=telefono3) Entonces
+							Repetir
+								Escribir "Numero repetido, ingrese uno diferente";
+								leer telefono;
+								
+							Hasta Que (telefono<>telefono1) o (telefono<>telefono2) o (telefono<>telefono3);
+							telefono1<-telefono;	
+							
+						SiNo
+							telefono1<-telefono;	
+						FinSi
+						
+						
+						Escribir "Nombre de la organizacion";
+						leer organizacion;
+						organizacion1<-organizacion;
+						
+					FinSi
+					Si eleccionsubmenu = 2 Entonces
+						Escribir "Ingrese los datos del contacto, ", "Nombre completo";
+						leer nombre;
+						nombre2<-nombre;
+						Escribir "Ingrese numero telefonico";
+						leer telefono;
+						si (telefono=telefono1) o (telefono=telefono2) o (telefono=telefono3) Entonces
+							Repetir
+								Escribir "Numero repetido, ingrese uno diferente";
+								leer telefono;
+								
+							Hasta Que (telefono<>telefono1) y (telefono<>telefono2) y (telefono<>telefono3);
+							telefono2<-telefono;	
+						SiNo
+							telefono2<-telefono;	
+						FinSi
+						Escribir "Nombre de la organizacion";
+						leer organizacion;
+						organizacion2<-organizacion;
+					FinSi
+					si eleccionsubmenu = 3 Entonces
+						Escribir "Ingrese los datos del contacto, ", "Nombre completo";
+						leer nombre;
+						nombre3<-nombre;
+						Escribir "Ingrese numero telefonico";
+						leer telefono;
+						si (telefono=telefono1) o (telefono=telefono2) o (telefono=telefono3) Entonces
+							Repetir
+								Escribir "Numero repetido, ingrese uno diferente";
+								leer telefono;
+								
+							Hasta Que (telefono<>telefono1) y (telefono<>telefono2) y (telefono<>telefono3);
+							telefono3<-telefono;	
+						SiNo
+							telefono3<-telefono;	
+						FinSi
+						
+						Escribir "Nombre de la organizacion";
+						leer organizacion;
+						organizacion3<-organizacion;
+					FinSi
+					
+					
+					
+				Hasta Que eleccionsubmenu=4;
+				
+				//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+				//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+			2: repetir
+					Escribir "Cual contacto desea consultar?";
+					Escribir "1. ", nombre1;
+					Escribir "2. ", nombre2;
+					Escribir "3. ", nombre3;
+					Escribir "4. Volver";
+					leer eleccionsubmenu;
+					repetir
+						si eleccionsubmenu=1 Entonces
+							Escribir "1. Nombre: ", nombre1, "-Telefono:", telefono1, "-Organizacion: ", organizacion1;
+							Escribir "";
+							Escribir "Cual contacto desea consultar?";
+							Escribir "1. ", nombre1;
+							Escribir "2. ", nombre2;
+							Escribir "3. ", nombre3;
+							Escribir "4. Volver";
+							leer eleccionsubmenu;
+							Escribir "";
+							
+							
+							
+						FinSi
+						si eleccionsubmenu=2 Entonces
+							Escribir "2. Nombre: ", nombre2, "-Telefono:", telefono2, "-Organizacion:", organizacion2;
+							Escribir "";
+							Escribir "Cual contacto desea consultar?";
+							Escribir "1. ", nombre1;
+							Escribir "2. ", nombre2;
+							Escribir "3. ", nombre3;
+							Escribir "4. Volver";
+							leer eleccionsubmenu;
+							
+							
+						FinSi
+						si eleccionsubmenu=3 Entonces
+							Escribir "3. Nombre: ", nombre3, "-Telefono:", telefono3, "-Organizacion:", organizacion3;
+							Escribir "";
+							Escribir "Cual contacto desea consultar?";
+							Escribir "1. ", nombre1;
+							Escribir "2. ", nombre2;
+							Escribir "3. ", nombre3;
+							Escribir "4. Volver";
+							leer eleccionsubmenu;
+							
+							
+						FinSi
+						
+					Hasta Que eleccionsubmenu>=4
+				Hasta Que eleccionsubmenu>=4
+				
+				//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+				
+				//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+			3: repetir 
+					escribir "Que contacto desea eliminar?";
+					Escribir "1. ", nombre1;
+					Escribir "2. ", nombre2;
+					Escribir "3. ", nombre3;
+					Escribir "4. Volver";
+					leer eleccion;
+					Segun eleccion Hacer
+						1: nombre1<-" ";
+							telefono1<-" ";
+							organizacion1<-" ";
+						2:nombre2<-" ";
+							telefono2<-" ";
+							organizacion2<-" ";
+						3:nombre3<-" ";
+							telefono3<-" ";
+							organizacion3<-" ";
+					FinSegun
+				Hasta Que eleccion>=4
+				
+				
+				
+				
+				
+		FinSegun
+		
+	Hasta Que eleccionmainmenu=4
+	
+	
+	FinProceso
+	
+	//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+	//--MENU PRINCIPAL---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+	//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+	
+	SubProceso mainmenu()
+	Escribir "1. Add contacto";
+	Escribir "2. Buscar contacto";
+	Escribir "3. Eliminar contacto";
+	Escribir "4. Salir del sistema";
+FinSubProceso
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+//------------SUBMENU ADICION-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+SubProceso submenu1()
+	Definir telefono, nombre, nombre1, nombre2, nombre3, telefono1, telefono2, telefono3, organizacion1, organizacion2, organizacion3, organizacion Como Caracter;
+	Definir eleccion, eleccionmainmenu, eleccionsubmenu, eleccionsubsubmenu Como entero;
+	organizacion1<-" ";
+	organizacion2<-" ";
+	organizacion3<-" ";
+	nombre1<-" ";
+	nombre2<-" ";
+	nombre3<-" ";
+	telefono1<-" ";
+	telefono2<-" ";
+	telefono3<-" ";
+	Escribir "1.-Nombre: ", nombre1, " 	-Telefono: ", telefono1, " -Organizacion: ", organizacion1; Escribir "2.-Nombre: ", nombre2, " -Telefono: ", telefono2, " -Organizacion:", organizacion2;
+	Escribir "3.-Nombre: ", nombre3, " -Telefono: ", telefono3, " -Organizacion: ", organizacion3; Escribir "4. Volver"; Escribir "En cual espacio desea agregar el contacto?";
+FinSubProceso
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+//------------SUBMENU ADICION-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+SubProceso elecsubmenu(1)
+	Definir telefono, nombre, nombre1, nombre2, nombre3, telefono1, telefono2, telefono3, organizacion1, organizacion2, organizacion3, organizacion Como Caracter;
+	Definir eleccion, eleccionmainmenu, eleccionsubmenu, eleccionsubsubmenu Como entero;
+	organizacion1<-" ";
+	organizacion2<-" ";
+	organizacion3<-" ";
+	nombre1<-" ";
+	nombre2<-" ";
+	nombre3<-" ";
+	telefono1<-" ";
+	telefono2<-" ";
+	telefono3<-" ";
+
+	leer eleccionsubmenu;
+		Si eleccionsubmenu = 1 Entonces
+			Escribir "Ingrese los datos del contacto, ", "Nombre completo";
+			leer nombre;
+			nombre1<-nombre;
+			Escribir "Ingrese numero telefonico";
+			leer telefono;
+			si (telefono=telefono1) y (telefono=telefono2) y (telefono=telefono3) Entonces
+				Repetir
+					Escribir "Numero repetido, ingrese uno diferente";
+					leer telefono;
+					
+				Hasta Que (telefono<>telefono1) y (telefono<>telefono2) y (telefono<>telefono3);
+			SiNo
+				telefono1<-telefono;	
+			FinSi
+			
+			
+			Escribir "Nombre de la organizacion";
+			leer organizacion;
+			organizacion1<-organizacion;
+			
+		FinSi
+		Si eleccionsubmenu = 2 Entonces
+			Escribir "Ingrese los datos del contacto, ", "Nombre completo";
+			leer nombre;
+			nombre2<-nombre;
+			Escribir "Ingrese numero telefonico";
+			leer telefono;
+			si (telefono=telefono1) y (telefono=telefono2) y (telefono=telefono3) Entonces
+				Repetir
+					Escribir "Numero repetido, ingrese uno diferente";
+					leer telefono;
+					
+				Hasta Que (telefono<>telefono1) y (telefono<>telefono2) y (telefono<>telefono3);
+			SiNo
+				telefono2<-telefono;	
+			FinSi
+			Escribir "Nombre de la organizacion";
+			leer organizacion;
+			organizacion2<-organizacion;
+		FinSi
+		si eleccionsubmenu = 3 Entonces
+			Escribir "Ingrese los datos del contacto, ", "Nombre completo";
+			leer nombre;
+			nombre3<-nombre;
+			Escribir "Ingrese numero telefonico";
+			leer telefono;
+			si (telefono=telefono1) y (telefono=telefono2) y (telefono=telefono3) Entonces
+				Repetir
+					Escribir "Numero repetido, ingrese uno diferente";
+					leer telefono;
+					
+				Hasta Que (telefono<>telefono1) y (telefono<>telefono2) y (telefono<>telefono3);
+			SiNo
+				telefono3<-telefono;	
+			FinSi
+			
+			Escribir "Nombre de la organizacion";
+			leer organizacion;
+			organizacion3<-organizacion;
+		FinSi
+		
+	
+	
+	
+	
+FinSubProceso
+
