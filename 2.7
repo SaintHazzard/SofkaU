@@ -1,0 +1,31 @@
+Proceso sin_titulo
+	Definir  Peso, estatura, imc como real;
+	imc<-0;
+	Escribir "Calculadora de IMC";
+	Escribir "Indique peso en kilogramos";
+	Leer Peso;
+	Escribir "Indique estatura en metros";
+	leer estatura;
+	Si estatura > 2.10 y estatura < 0.10 Entonces
+		Escribir "Valor de medida incorrecto, indique estatura en metros usando la coma";
+	SiNo
+		imc<-Peso/(estatura^2);
+		Si imc <-18.5 Entonces
+			Escribir imc, ": El IMC es BAJO DE PESO";
+		FinSi
+		Si imc >= 18.5 y imc <= 24.9 Entonces
+			Escribir imc, ": IMC NORMAL";
+		FinSi
+		Si imc >= 25 y imc <= 29.9 Entonces
+			Escribir imc,  ": IMS SOBREPESO";
+			
+		FinSi
+		Si imc >= 30 Entonces
+			
+			Escribir imc, ": IMC OBESIDAD"; 
+		FinSi
+	FinSi
+	
+	
+	
+FinProceso
