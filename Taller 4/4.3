@@ -1,0 +1,24 @@
+Proceso sin_titulo
+	
+	primos1a1000;
+	
+FinProceso
+
+SubProceso primos1a1000
+	definir i, k, primo Como Real;
+	primo<-0;
+	
+	Para i<-1 hasta 1000 Hacer
+		Para k<-1 hasta 1000 Hacer
+			Si i mod k = 0 Entonces
+				primo<-primo+1;
+			FinSi
+			
+		FinPara
+		Si primo = 2 Entonces
+			Escribir Sin Saltar i, " 	 ";
+		FinSi
+		primo<-0;
+	FinPara
+	Escribir "";
+FinSubProceso

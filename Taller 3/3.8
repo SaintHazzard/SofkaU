@@ -1,4 +1,32 @@
 Proceso sin_titulo
+	cuerpo;
+	
+FinProceso
+
+
+
+
+
+
+
+
+
+
+
+//La escuela automovilística "El Maestro" requiere una aplicación que permita registrar a sus clientes en los cursos de enseñanza automovilística y establecer quienes lo han aprobado para continuar con el trámite de adquirir la 
+//licencia de conducción. Para cada usuario se debe permitir registrar su ingreso al curso, consultar usuarios que hayan presentado el curso y resultados de la prueba del curso
+//-----(si fueron aprobados o no). Recuerde que el sistema debe terminar cuando el usuario así lo indique. Tenga presente que la escuela tiene capacidad máx
+//-----ima de gestionar 8 usuarios en su totalidad.
+	
+SubProceso mainmenu()
+	Escribir "ESCUELA AUTOMOVILISTICA EL MAESTRO, CONTROL USUARIOS ACTIVOS";
+	Escribir "1. Registrar cliente";
+	Escribir "2. Consultar estado clientes";
+	Escribir "3. Salir del sistema";
+FinSubProceso
+
+
+SubProceso cuerpo
 	Definir eleccionmenu, elecestado, lugar Como Real;
 	definir nombre, nombre1, nombre2, nombre3, nombre4, nombre5, nombre6, nombre7, nombre8, apro, desa Como Caracter;
 	Definir estado1, estado2, estado3, estado4, estado5, estado6, estado7, estado8, estado Como Logico;
@@ -38,9 +66,8 @@ Proceso sin_titulo
 					Si lugar > 0 y lugar<9  Entonces
 						Escribir "Nombre del cliente";
 						leer nombre;
-						Escribir "Estado del cliente";
-						Escribir "1. Aprobado";
-						Escribir "2. Reprobado";
+						
+						estadocliente;
 						
 						Repetir
 							leer elecestado;
@@ -98,7 +125,8 @@ Proceso sin_titulo
 				Hasta Que lugar=9
 			2: Escribir "Registro de estado de usuarios"; Escribir "Verdadero: Aprobado      Falso: Reprobado";
 				Escribir "1. ", nombre1 ; Sin Saltar escribir ": ", estado1; Escribir "2. ", nombre2, ": ", estado2; Escribir "3. ", nombre3, ": ", estado3; Escribir "4. ", nombre4, ": ", estado4; 
-				Escribir "1. ", nombre5,": ",	 estado5;Escribir "1. ", nombre6, ": ", estado6;Escribir "1. ", nombre7, ": ", estado7;Escribir "1. ", nombre8, ": ", estado8;
+				Escribir "5. ", nombre5,": ",	 estado5;Escribir "6. ", nombre6, ": ", estado6;Escribir "7. ", nombre7, ": ", estado7;Escribir "8. ", nombre8, ": ", estado8;
+				Escribir "Presione cualquier tecla para continuar";
 				Esperar Tecla;
 				
 				
@@ -113,18 +141,11 @@ Proceso sin_titulo
 		
 	Hasta Que eleccionmenu=3;
 	
-	
-FinProceso
-
-//La escuela automovilística "El Maestro" requiere una aplicación que permita registrar a sus clientes en los cursos de enseñanza automovilística y establecer quienes lo han aprobado para continuar con el trámite de adquirir la 
-//licencia de conducción. Para cada usuario se debe permitir registrar su ingreso al curso, consultar usuarios que hayan presentado el curso y resultados de la prueba del curso
-//-----(si fueron aprobados o no). Recuerde que el sistema debe terminar cuando el usuario así lo indique. Tenga presente que la escuela tiene capacidad máx
-//-----ima de gestionar 8 usuarios en su totalidad.
-	
-SubProceso mainmenu()
-	Escribir "ESCUELA AUTOMOVILISTICA EL MAESTRO, CONTROL USUARIOS ACTIVOS";
-	Escribir "1. Registrar cliente";
-	Escribir "2. Consultar estado clientes";
-	Escribir "3. Salir del sistema";
 FinSubProceso
 
+SubProceso estadocliente
+	
+	Escribir "Estado del cliente";
+	Escribir "1. Aprobado";
+	Escribir "2. Reprobado";
+FinSubProceso

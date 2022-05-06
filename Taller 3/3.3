@@ -1,5 +1,20 @@
 Proceso sin_titulo
 	
+	arbolsuperior;
+	tronco;
+	
+FinProceso
+
+
+
+
+
+
+
+
+
+
+SubProceso arbolsuperior
 	Definir espacio, contador, contadorgeneral, aste, contadoraste, count, i, contadoras Como Real;
 	contador<-0;
 	espacio<-11;
@@ -26,19 +41,29 @@ Proceso sin_titulo
 		contadoras<-contadoras-1;
 		Escribir "";
 		
-
+		
 		
 		
 		
 		contador<-0;
 		espacio<-espacio-1;
 		contadorgeneral<-contadorgeneral+1;
-	
+		
 		
 		
 		
 		
 	Hasta Que contadorgeneral=11
+FinSubProceso
+
+
+
+
+
+
+SubProceso tronco
+	Definir espacio, contador, contadorgeneral, aste, contadoraste, count, i, contadoras Como Real;
+	contador<-0;
 	Repetir
 		contador<-contador+1;
 		Escribir Sin Saltar " ";
@@ -71,5 +96,5 @@ Proceso sin_titulo
 		
 	Hasta Que contador>=1 y contador>=8;
 	Escribir "*******";
-FinProceso
+FinSubProceso
 

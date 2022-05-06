@@ -1,8 +1,14 @@
 Proceso sin_titulo
+	
+	
+	menubucle;
+	
+FinProceso
+
+SubProceso menubucle
 	Definir eleccions Como Caracter;
 	Definir eleccion  como real;
 	Definir name Como Caracter;
-	
 	Repetir
 		Escribir "Menu de usuario";
 		Escribir "1. Captura nombre";
@@ -23,10 +29,9 @@ Proceso sin_titulo
 		Si eleccion >= 4 Entonces
 			Escribir "Eleccion invalida, digite una correcta";
 		FinSi
+		Si eleccion=3 Entonces
+			Escribir "Cerrando programa";
+		FinSi
 		
 	Hasta Que eleccion=3
-	Si eleccion=3 Entonces
-		Escribir "Cerrando programa";
-	FinSi
-	
-FinProceso
+FinSubProceso

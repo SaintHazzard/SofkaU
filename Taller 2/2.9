@@ -1,0 +1,74 @@
+Proceso geometria
+	
+	definir eleccion Como Entero;
+	definir valor1, valor2, valor3, total Como Real;
+	
+	cabeza;
+	Leer eleccion;
+	Segun eleccion hacer
+		1: rectangulo;
+			
+			
+			
+		2: triangulo;
+			
+			
+			
+		3:trapecio;
+	FinSegun
+	
+FinProceso
+
+
+//-----------------------------------------------------------------------------------------------//
+//-----------------------------------------------------------------------------------------------//
+
+
+
+SubProceso cabeza
+	Escribir "Calcula el area de rentangulos, triangulos y trapecios de forma rapida y precisa, selecciona la figura que deseas calcular";
+	Escribir "1. Calcular area de rectangulo";
+	Escribir "2. Calcular area de triangulo";
+	Escribir "3. Calcular area de trapecio";
+	
+FinSubProceso
+
+
+SubProceso rectangulo
+	definir eleccion Como Entero;
+	definir valor1, valor2, valor3, total Como Real;
+	escribir "Indica la base de tu rectangulo";
+	leer valor1;
+	Escribir "Indica la altura de tu rectangulo';
+	leer valor2;
+	total<-valor1*valor2;
+	Escribir "El area de tu rectangulo es: ", total;
+	
+FinSubProceso
+SubProceso triangulo
+	definir eleccion Como Entero;
+	definir valor1, valor2, valor3, total Como Real;
+	escribir "Indica la base de tu triangulo";
+	leer valor1;
+	Escribir "Indica la altura de tu triangulo';
+	leer valor2;
+	total<-(valor1*valor2)/2;
+	Escribir "El area de tu triangulo es: ", total;
+	
+	
+FinSubProceso
+
+SubProceso trapecio
+	definir eleccion Como Entero;
+	definir valor1, valor2, valor3, total Como Real;
+	escribir "Indica la medida de una de sus bases";
+	leer valor1;
+	Escribir "Indica la medida de su otra base";
+	leer valor2;
+	Escribir "Y por ultimo indica la altura de tu trapecio";
+	leer valor3;
+	total<-((valor1+valor2)*valor3)/2;
+	Escribir "El area de tu trapecio es: ", total;
+	
+	
+FinSubProceso

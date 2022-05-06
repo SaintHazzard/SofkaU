@@ -2,6 +2,29 @@
 
 
 Proceso sin_titulo
+	
+	submenu;
+	
+	FinProceso
+	
+	//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+	//--MENU PRINCIPAL---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+	//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+	
+	SubProceso mainmenu()
+	Escribir "1. Add contacto";
+	Escribir "2. Buscar contacto";
+	Escribir "3. Eliminar contacto";
+	Escribir "4. Salir del sistema";
+FinSubProceso
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+//------------SUBMENU ADICION-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+SubProceso submenu()
+	
+
 	Definir telefono, nombre, nombre1, nombre2, nombre3, telefono1, telefono2, telefono3, organizacion1, organizacion2, organizacion3, organizacion Como Caracter;
 	Definir eleccion, eleccionmainmenu, eleccionsubmenu, eleccionsubsubmenu Como entero;
 	organizacion1<-"         ";
@@ -23,7 +46,9 @@ Proceso sin_titulo
 			
 				//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
 				//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
-			1: repetir
+			1: 
+				
+				repetir
 					Escribir "1.-Nombre: ", nombre1, " 	-Telefono: ", telefono1, " -Organizacion: ", organizacion1; Escribir "2.-Nombre: ", nombre2, " -Telefono: ", telefono2, " -Organizacion:", organizacion2;
 					Escribir "3.-Nombre: ", nombre3, " -Telefono: ", telefono3, " -Organizacion: ", organizacion3; Escribir "4. Volver"; Escribir "En cual espacio desea agregar el contacto?";
 					leer eleccionsubmenu;
@@ -181,121 +206,9 @@ Proceso sin_titulo
 	Hasta Que eleccionmainmenu=4
 	
 	
-	FinProceso
-	
-	//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
-	//--MENU PRINCIPAL---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
-	//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
-	
-	SubProceso mainmenu()
-	Escribir "1. Add contacto";
-	Escribir "2. Buscar contacto";
-	Escribir "3. Eliminar contacto";
-	Escribir "4. Salir del sistema";
-FinSubProceso
-
-//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
-//------------SUBMENU ADICION-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
-//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
-
-SubProceso submenu1()
-	Definir telefono, nombre, nombre1, nombre2, nombre3, telefono1, telefono2, telefono3, organizacion1, organizacion2, organizacion3, organizacion Como Caracter;
-	Definir eleccion, eleccionmainmenu, eleccionsubmenu, eleccionsubsubmenu Como entero;
-	organizacion1<-" ";
-	organizacion2<-" ";
-	organizacion3<-" ";
-	nombre1<-" ";
-	nombre2<-" ";
-	nombre3<-" ";
-	telefono1<-" ";
-	telefono2<-" ";
-	telefono3<-" ";
-	Escribir "1.-Nombre: ", nombre1, " 	-Telefono: ", telefono1, " -Organizacion: ", organizacion1; Escribir "2.-Nombre: ", nombre2, " -Telefono: ", telefono2, " -Organizacion:", organizacion2;
-	Escribir "3.-Nombre: ", nombre3, " -Telefono: ", telefono3, " -Organizacion: ", organizacion3; Escribir "4. Volver"; Escribir "En cual espacio desea agregar el contacto?";
 FinSubProceso
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
 //------------SUBMENU ADICION-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
 
-SubProceso elecsubmenu(1)
-	Definir telefono, nombre, nombre1, nombre2, nombre3, telefono1, telefono2, telefono3, organizacion1, organizacion2, organizacion3, organizacion Como Caracter;
-	Definir eleccion, eleccionmainmenu, eleccionsubmenu, eleccionsubsubmenu Como entero;
-	organizacion1<-" ";
-	organizacion2<-" ";
-	organizacion3<-" ";
-	nombre1<-" ";
-	nombre2<-" ";
-	nombre3<-" ";
-	telefono1<-" ";
-	telefono2<-" ";
-	telefono3<-" ";
-
-	leer eleccionsubmenu;
-		Si eleccionsubmenu = 1 Entonces
-			Escribir "Ingrese los datos del contacto, ", "Nombre completo";
-			leer nombre;
-			nombre1<-nombre;
-			Escribir "Ingrese numero telefonico";
-			leer telefono;
-			si (telefono=telefono1) y (telefono=telefono2) y (telefono=telefono3) Entonces
-				Repetir
-					Escribir "Numero repetido, ingrese uno diferente";
-					leer telefono;
-					
-				Hasta Que (telefono<>telefono1) y (telefono<>telefono2) y (telefono<>telefono3);
-			SiNo
-				telefono1<-telefono;	
-			FinSi
-			
-			
-			Escribir "Nombre de la organizacion";
-			leer organizacion;
-			organizacion1<-organizacion;
-			
-		FinSi
-		Si eleccionsubmenu = 2 Entonces
-			Escribir "Ingrese los datos del contacto, ", "Nombre completo";
-			leer nombre;
-			nombre2<-nombre;
-			Escribir "Ingrese numero telefonico";
-			leer telefono;
-			si (telefono=telefono1) y (telefono=telefono2) y (telefono=telefono3) Entonces
-				Repetir
-					Escribir "Numero repetido, ingrese uno diferente";
-					leer telefono;
-					
-				Hasta Que (telefono<>telefono1) y (telefono<>telefono2) y (telefono<>telefono3);
-			SiNo
-				telefono2<-telefono;	
-			FinSi
-			Escribir "Nombre de la organizacion";
-			leer organizacion;
-			organizacion2<-organizacion;
-		FinSi
-		si eleccionsubmenu = 3 Entonces
-			Escribir "Ingrese los datos del contacto, ", "Nombre completo";
-			leer nombre;
-			nombre3<-nombre;
-			Escribir "Ingrese numero telefonico";
-			leer telefono;
-			si (telefono=telefono1) y (telefono=telefono2) y (telefono=telefono3) Entonces
-				Repetir
-					Escribir "Numero repetido, ingrese uno diferente";
-					leer telefono;
-					
-				Hasta Que (telefono<>telefono1) y (telefono<>telefono2) y (telefono<>telefono3);
-			SiNo
-				telefono3<-telefono;	
-			FinSi
-			
-			Escribir "Nombre de la organizacion";
-			leer organizacion;
-			organizacion3<-organizacion;
-		FinSi
-		
-	
-	
-	
-	
-FinSubProceso
 

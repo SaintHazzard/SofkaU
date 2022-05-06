@@ -1,0 +1,88 @@
+Proceso sin_titulo
+	definir eleccion, dia, mes, ano, n Como Entero;
+	Definir anotacion, cilindraje Como Caracter;
+	
+	dia<-0;
+	mes<-0;
+	ano<-0;
+	Escribir "Registro de motos taller el maquinista, que desea hacer?";
+	Escribir "1. Registrar entrada de motocicleta";
+	Escribir "2. Registrar salida de motocicleta";
+	leer eleccion;
+	Segun eleccion Hacer
+		1: fecha;
+			cuerpo;
+		2: fecha;
+			cuerpo;
+			
+	FinSegun
+	
+	
+FinProceso
+
+
+//---------------------------------------------------------------------------------------------------------//
+
+
+
+
+
+
+SubProceso fecha
+	definir eleccion, dia, mes, ano, n Como Entero;
+	Definir anotacion, cilindraje Como Caracter;
+	dia<-0;
+	mes<-0;
+	ano<-0;
+	Escribir "Ingrese fecha de salida,"; Sin Saltar Escribir " ingrese numero para dia";
+	Leer n;
+	Si n>31 Entonces
+		Escribir " error numero ingresado no permitido";
+	Sino
+		
+		dia<-n;
+		
+	FinSi
+	
+	Escribir "Ingrese numero para mes";
+	Leer n;
+	Si n>12 Entonces
+		Escribir " error numero ingresado no permitido";
+	Sino
+		
+		mes<-n;
+		
+		
+	FinSi
+	
+	
+	Escribir "Ingrese numero para año";
+	Leer n;
+	Si n<0 Entonces
+		Escribir " error numero ingresado no permitido";
+	Sino
+		
+		ano<-n;
+		
+		
+		
+	FinSi
+FinSubProceso
+
+SubProceso cuerpo
+	
+	definir eleccion, dia, mes, ano, n Como Entero;
+	Definir anotacion, cilindraje Como Caracter;
+	dia<-0;
+	mes<-0;
+	ano<-0;
+	Escribir "Indique arreglos y reparaciones hechas a la motocicleta";
+	leer cilindraje;
+	Escribir "Escriba las novedades hechas por el mecanico";
+	leer anotacion;
+	Limpiar Pantalla;
+	Escribir dia,"/",mes,"/",ano;
+	Escribir "Arreglos del vehiculo: ", cilindraje;
+	Escribir "Observaciones del mecanico: ", anotacion;
+	
+FinSubProceso

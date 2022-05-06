@@ -1,0 +1,26 @@
+
+
+Proceso taller
+	cabeza;
+	
+FinProceso
+
+SubProceso cabeza
+	definir nombre Como Caracter;
+	Definir edad Como Entero;
+	Escribir 'Hola, indicame tu nombre completo';
+	Leer nombre;
+	Escribir 'Ahora indicame tu edad';
+	Leer edad;
+	Si edad>=18 Entonces
+		Escribir nombre,' usted es mayor de edad, por lo tanto puede entrar a la fiesta.';
+	SiNo
+		Escribir nombre,' usted es menor de edad, por lo tanto, no puede entrar a la fiesta, por favor devuélvase a su casa';
+	FinSi
+	
+	
+	
+FinSubProceso
+
+
+

@@ -1,12 +1,19 @@
 Proceso sin_titulo
 	definir inusu, contador, i, result Como Real;
 	Escribir "De que valor desea la tabla de multiplicar";
+	cuerpo;
+	
+	
+	
+FinProceso
+
+
+SubProceso cuerpo
+	definir inusu, contador, i, result Como Real;
 	Leer inusu;
 	contador<-0;
 	Para i<-1 hasta 10 Hacer
 		result<-inusu*i;
 		Escribir inusu, "*", i, " = ", result;
 	FinPara
-	
-	
-FinProceso
+FinSubProceso
